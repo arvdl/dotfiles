@@ -1,0 +1,59 @@
+configuration {
+	font:							"Menlo Bold 11";
+	modi: "drun";
+	icon-theme: "Flattery";
+	width: 40;
+	show-icons: true;
+	drun-display-format: "{icon} {name}";
+	display-drun: "Open";
+	location: 0;
+	disable-history: false;
+}
+
+* {
+	background-color: #1a212e;
+	text-color: #abb2bf;	
+	show-icons: true;
+}
+
+window {
+	height: 400px;
+	border:  3px;
+	background-color: #abb2bf;
+}
+
+mainbox {
+	padding: 5px;
+}
+
+inputbar {
+	children: [prompt, entry];
+}
+
+prompt {
+	background-color: #abb2bf;
+	padding: 5px 5px 0px;
+	text-color: @background-color;
+}
+
+entry {
+	padding: 5px;
+}
+
+listview {
+    padding: 5px 0px 0px 0px;
+	columns: 3;
+}
+
+element {
+    padding: 3px;
+}
+
+element-icon {
+	size: 18px;
+}
+
+element selected {
+    background-color: #abb2bf;
+    text-color: #1a212e;
+}
