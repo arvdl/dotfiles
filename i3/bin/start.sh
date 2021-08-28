@@ -22,7 +22,7 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK &
 /usr/bin/pipewire-media-session &
 
 # Set default backlight
-xbacklight -set 30 &
+xbacklight -set 45 &
 
 # Enable tap
 xinput set-prop "ELAN1200:00 04F3:3090 Touchpad" "libinput Tapping Enabled" 1
@@ -39,17 +39,13 @@ playerctld daemon &
 autotiling &
 
 # Restore wallpaper
-feh --bg-fill ~/Pictures/color/voidlinux.png
+feh --bg-fill ~/Pictures/color/carr.png
 
 # Dust notification
-dunst \
-	-geom "320x80-20+60" -frame_width "2" -font "Monaco Bold 12" \
-	-lb "#1e222a" -lf "#c8ccd4" -lfr "#61afef" \
-	-nb "#1e222a" -nf "#c8ccd4" -nfr "#61afef" \
-	-cb "#1e222a" -cf "#e06c75" -cfr "#e06c75" &
+dunst -c ~/.config/dunst/dunstrc &
 
 # Picom compositor
-picom --config ~/.config/picom/picom.conf &
+#picom --config ~/.config/picom/picom.conf &
 
 # Polybar
 polybar -q main -c ~/.config/polybar/config.ini &
