@@ -5,7 +5,7 @@ Dotfiles collections:
 * i3gaps
 * polybar
 * rofi
-* alacritty
+* alacritty - st
 * tmux
 * zsh with zprezto framework
 * vim
