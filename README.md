@@ -1,6 +1,26 @@
 # dotfiles
 
-Dotfiles collections.
+Dotfiles collections:
+
+* i3gaps
+* polybar
+* rofi
+* alacritty
+* tmux
+* zsh with zprezto framework
+* vim
+* dunst
+* picom
+* gammastep
+* mpd
+* mpv
+* newsboat
+* zathura
+
+WIP:
+
+* sway
+* waybar
 
 ## i3gaps
 
