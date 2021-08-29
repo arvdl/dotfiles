@@ -22,7 +22,24 @@ WIP:
 * sway
 * waybar
 
-## i3gaps
+## How to install
+
+1. Install GNU Stow or stow
+2. Clone the repository
+
+```bash
+git clone https://github.com/arvdl/dotfiles ~/dotfiles
+```
+
+3. Deploy using stow
+
+```
+cd ~/dotfiles && stow *
+```
+
+## Screenshot
+
+### i3gaps
 
 ![desktop](screenshot/desktop.png)
 ![menu](screenshot/menu.png)
