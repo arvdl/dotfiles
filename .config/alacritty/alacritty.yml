@@ -1,0 +1,34 @@
+import:
+  - ~/.config/alacritty/ayu-dark.yml
+  - ~/.config/alacritty/fonts.yml
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+   x: 20
+   y: 20
+
+  size: 12.0
+
+  offset:
+   x: -2
+   y: 0
+
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Block
+
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: on
+
+  # from `0.0` to `1.0`.
+  thickness: 0.10
