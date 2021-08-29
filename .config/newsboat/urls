@@ -42,8 +42,6 @@ https://www.zdnet.com/topic/linux/rss.xml news linux
 https://pointieststick.com/feed/ news linux
 https://distrowatch.com/news/dw.xml news linux
 https://distrowatch.com/news/dww.xml news linux
-https://matrix.org/blog/feed news mine
-https://www.process-one.net/blog/feed/ news mine
 https://www.secjuice.com/rss/ security news
 https://www.itsecuritynews.info/feed/ security news
 https://www.itsecurityguru.org/feed/ security news
@@ -102,71 +100,4 @@ https://feeds.feedburner.com/Ostechnix linux tutorial
 https://www.cloudsavvyit.com/feed/ linux tutorial
 https://fedoramagazine.org/feed/ linux tutorial
 https://vitux.com/feed linux tutorial
-https://www.thegeekstuff.com/feed/ linux tutorial
-
-# sysadmin feeds
-https://blog.martinfjordvald.com/feed/ blog
-https://blog.sanctum.geek.nz/feed/ blog
-https://feeds2.feedburner.com/Command-line-fu blog
-https://www.madboa.com/blog/index.xml blog
-https://ma.ttias.be/blog/index.xml blog
-https://raymii.org/s/feed.xml blog
-
-# podcast
-https://feeds.megaphone.fm/darknetdiaries podcast
-https://www.sans.org/webcasts/rss/ podcast
-https://feeds.soundcloud.com/users/soundcloud:users:261098918/sounds.rss podcast
-https://brakeingsecurity.libsyn.com/rss podcast
-https://latenightlinux.com/feed/mp3 podcast
-https://anchor.fm/s/a5967a8/podcast/rss podcast
-https://isc.sans.edu/dailypodcast.xml podcast
-https://www.iotssa.com/feed/podcast/ podcast
-https://feeds.fireside.fm/linuxactionnews/rss podcast
-https://selfhosted.show/rss podcast
-https://feeds.fireside.fm/coder/rss podcast
-https://www.smashingsecurity.com/rss podcast
-https://anchor.fm/s/1345c3c/podcast/rss podcast
-https://www.symbolcrash.com/feed/podcast podcast
-https://feeds.fireside.fm/techsnap/rss podcast
-https://opensourcesecuritypodcast.libsyn.com/rss podcast
-https://api.spokenlayer.com/feed/channel/v1-wired-security-ext/3c9929b72538c12bd92ac6762f8d798b9d4e8cdca7692ea74f466061d01816cb podcast
-https://www.blackhillsinfosec.com/feed/podcast/ podcast
-https://trustedsec.libsyn.com/rss podcast
-https://feeds.megaphone.fm/zdnetsecurityupdate podcast
-https://feed.podbean.com/etcg/feed.xml podcast
-https://7minsec.libsyn.com/rss podcast
-https://symantec-enterprise-podcasts.security.com/podcasts/api/v1/rss/podcasts/2059f58b-bde9-49d7-a4b5-d5b322dbebf2 podcast
-https://sharedsecurity.net/feed/podcast/ podcast
-https://feeds.buzzsprout.com/840682.rss podcast
-https://tripwire.libsyn.com/rss podcast
-https://ubuntusecuritypodcast.org/episode/index.xml podcast
-https://www.bsdnow.tv/rss podcast
-https://mintcast.org/category/mp3/feed/ podcast
-https://feeds.twit.tv/floss.xml podcast
-https://linuxlads.com/feed_mp3.rss podcast
-https://tuxdigital.com/feed/thisweekinlinux-mp3 podcast
-https://operations.fm/episodes/index.xml podcast
-https://gnuworldorder.info/ogg.atom.xml podcast
-http://www.lugradio.org/episodeslow.rss podcast
-
-
-# Podcast Dota
-https://feeds.simplecast.com/mVuvbeQv podcast dota2
-
-# Anime and Films
-https://pahe.ph/feed movies
-https://tvshows.480mkv.com/rss movies
-https://psarips.uk/feed/ movies
-https://snahp.it/?feed=rss2 movies
-https://yts.mx/rss movies
-https://dramaencode.co/feed/ movies
-
-# Writeup
-https://thewhiteh4t.github.io/feed.xml writeup
-https://binsec.nl/feed/ writeup
-https://khaoticdev.net/feed/ writeup
-https://hackso.me/feed.xml writeup
-https://www.hackingarticles.in/feed/ writeup
-
-# Job
-https://www.freelancewritinggigs.com/feed job
+https://www.thegeekstuff.com/feed/ linux tutoria
