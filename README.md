@@ -33,10 +33,6 @@ git clone https://github.com/arvdl/dotfiles ~/dotfiles
 
 3. Deploy using stow
 
-```
-cd ~/dotfiles && stow *
-```
-
 ## Screenshot
 
 ### i3gaps
