@@ -33,14 +33,3 @@ git clone https://github.com/arvdl/dotfiles ~/dotfiles
 
 3. Deploy using stow
 
-## Screenshot
-
-### i3gaps
-
-![desktop](screenshot/desktop.png)
-![menu](screenshot/menu.png)
-![menu2](/screenshot/menu2.png)
-
-## Sway
-
-on ..
