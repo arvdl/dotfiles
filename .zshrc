@@ -1,26 +1,27 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+### ${ZDOTDIR:-$HOME}/.zshrc
 
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# setup your environment
+export EDITOR=vim
+export HISTFILE=/dev/null
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# load pz
+PZ_PLUGIN_HOME="${ZDOTDIR:-$HOME/.config/zsh}/plugins"
+[[ -d $PZ_PLUGIN_HOME/pz ]] ||
+    git clone https://github.com/mattmc3/pz.git $PZ_PLUGIN_HOME/pz
+source $PZ_PLUGIN_HOME/pz/pz.zsh
 
-# Customize to your needs...
+# source plugins from github
+pz source zsh-users/zsh-autosuggestions
+pz source zsh-users/zsh-history-substring-search
+pz source zsh-users/zsh-completions
+pz source zsh-users/zsh-syntax-highlighting
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# source ohmyzsh plugins
+pz source ohmyzsh/ohmyzsh plugins/colored-man-pages
 
- autoload -Uz promptinit
-  promptinit
-  prompt damoekri
+# -or- use oh-my-zsh themes instead of a prompt plugin
+pz source ohmyzsh lib/git
+pz source ohmyzsh lib/theme-and-appearance
+pz source ohmyzsh themes/minimal
+pz source ohmyzsh plugins/autojump
+pz source ohmyzsh plugins/vagrant

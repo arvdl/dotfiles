@@ -23,10 +23,10 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-gaps inner 1
-gaps outer 10
+gaps inner 5
+gaps outer 3
 
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 0
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #0A0E14 #0A0E14 #FFFFFF #98C379   #0A0E14
@@ -45,16 +45,16 @@ title_align center
 
 
 ##-- Apps ------------------------------
-bindsym $mod+Return exec st -t "Ravn shell" -f "Iosevka Term:style=Medium:size=12.7"
-#bindsym $mod+Return exec alacritty
+#bindsym $mod+Return exec st -t "Ravn shell" -f "Consolas:style=Bold:size=12"
+bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+e exec subl
-bindsym $mod+Shift+w exec thunar
+bindsym $mod+Shift+w exec pcmanfm
 bindsym $mod+Shift+s exec flameshot gui
 
 
 ##-- Lockscreen ------------------------------
-bindsym $alt+Control+l exec  i3lock-fancy -f Monaco-Bold -t "TYPE YOUR PASSWORD" -g
+bindsym $alt+Control+l exec betterlockscreen -l dim -b 0.5 -tf "%I:%M %p"
 
 
 ##-- Volume Key ------------------------------
@@ -185,7 +185,7 @@ bindsym $alt+Control+b exec ~/.config/i3/bin/bluetooth.sh
 #exec_always xrandr --setprovideroutputsource modesetting NVIDIA-0; xrandr --auto
 
 exec_always --no-startup-id ~/.config/i3/bin/start.sh
-exec --no-startup-id xss-lock --transfer-sleep-lock --  i3lock-fancy -f Monaco-Bold -t "TYPE YOUR PASSWORD" -g
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
 
 
 ##-- Reload / Restart ------------------------
@@ -198,6 +198,14 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
+
+#-- Rofi -----------------
+bindsym $mod+$alt+k exec --no-startup-id ~/.config/rofi/scripts/rofi-i3-keybindings
+bindsym $mod+$alt+l exec --no-startup-id ~/.config/rofi/scripts/rofi-i3-layout
+bindsym $mod+$alt+n exec --no-startup-id ~/.config/rofi/scripts/rofi-network
+bindsym $mod+$alt+p exec --no-startup-id ~/.config/rofi/scripts/rofi-power
+bindsym $mod+$alt+v exec --no-startup-id ~/.config/rofi/scripts/rofi-vpn
+
 
 ##-- Resize / Move / Gaps ------------------------
 
@@ -271,10 +279,13 @@ mode "$mode_gaps" {
 
 bindsym $mod+Shift+g mode "$mode_gaps"
 
+##-- Auto Scrathpad --------------------
+for_window [class="mpv|KeepassXC"] move scratchpad
+
 ##-- Wordspaces Rules --------------------
 assign [class="VirtualBox Manager|qemu|Qemu-system-x88_64"] 6
-assign [class="VLC|Ario|KeepassXC"] 4
-assign [class="Thunar|nautilus|Ristretto"] 5
+assign [class="VLC|Ario|KeepassXC"] 5
+assign [class="pcmanfm|nautilus|Ristretto"] 4
 assign [class="sublime"] 3
 assign [class="st|Alacritty"] 2
 assign [class="firefox"] 1

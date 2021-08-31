@@ -1,0 +1,24 @@
+wallpaper: "/home/hanb1n/Pictures/wallhaven/wallhaven-g8x33l.jpg"
+
+special:
+    background: "#090b0e"
+    foreground: "#959aba"
+    cursor: "#959aba"
+
+colors:
+    color0: "#090b0e"
+    color1: "#1F3561"
+    color2: "#2D3C68"
+    color3: "#334259"
+    color4: "#364371"
+    color5: "#BD7D46"
+    color6: "#383F80"
+    color7: "#959aba"
+    color8: "#686b82"
+    color9: "#1F3561"
+    color10: "#2D3C68"
+    color11: "#334259"
+    color12: "#364371"
+    color13: "#BD7D46"
+    color14: "#383F80"
+    color15: "#959aba"

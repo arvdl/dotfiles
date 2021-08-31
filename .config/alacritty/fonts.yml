@@ -2,22 +2,22 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "Consolas"
+    family: "Monaco"
     style: Medium
 
   # Bold font face
   bold:
-    family: "Consolas"
+    family: "Monaco"
     style: Bold
 
   # Italic font face
   italic:
-    family: "Consolas"
+    family: "Monaco"
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "Consolas"
+    family: "Monaco"
     style: Bold Italic
 
   # Point size
