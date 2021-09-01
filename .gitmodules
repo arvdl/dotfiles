@@ -1,3 +1,0 @@
-[submodule "mpv/scripts"]
-	path = mpv/scripts
-	url = git@github.com:jonniek/mpv-scripts.git
