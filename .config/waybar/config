@@ -1,0 +1,197 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 36, // Waybar height (to be removed for auto height)
+    // Archived modules
+    // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
+    // Choose the order of the modules
+    "modules-left": [ "sway/workspaces", "custom/scratchpad-indicator", "sway/mode", "idle_inhibitor", "sway/window"],
+    "modules-center": [],
+    "modules-right": ["cpu", "memory", "temperature", "backlight","pulseaudio", "battery", "clock", "tray"],
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+                    "1": "main",
+                    "2": "term",
+                    "3": "code",
+                    "4": "media",
+                    "5": "files",
+                    "6": "vms",
+                    "7": "others"
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+        "format": "{}",
+        "max-length": 30, 
+        "rewrite": {
+           "(.*) - Mozilla Firefox": "🌎 $1",
+           "(.*) - vim": " $1",
+           "(.*) - zsh": " [$1]"
+        }
+    },
+    "bluetooth": {
+        "interval": 30,
+        "format": "{icon}",
+        // "format-alt": "{status}",
+        "format-icons": {
+            "enabled": "",
+            "disabled": ""
+        },
+        "on-click": "blueberry"
+    },    
+    "sway/language": {
+        "format": " {}",
+        "max-length": 5,
+        "min-length": 5,        
+    },
+    "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}  {percent}%",
+    "format-icons": ["", ""]
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        },
+        "tooltip": "true"
+    },
+    "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "max-length": 25
+    },
+
+    "tray": {
+        //"icon-size": 11,
+        "spacing": 3
+    },
+    "clock": {
+        // "format": " {:%H:%M  %e %b}",
+        "format-alt": "  {:%a, %d. %b   %H:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<b>{}</b>",
+        //"on-click": "gnome-calendar"
+    },
+    "sway/window": {
+        "format": "{}",
+        "max-length": 240
+    },
+    "cpu": {
+        "interval": "1",      
+        "format": " {max_frequency}GHz - {usage}%",
+        "max-length": 20,
+        "min-length": 13,
+        "on-click": "st -e htop --sort-key PERCENT_CPU",
+        "tooltip": false
+    },
+    "temperature": {
+        //"thermal-zone": 1,
+        "interval": "4",
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 74,
+        "format-critical": "  {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "max-length": 7,
+        "min-length": 7
+    },
+    "network": {
+        // "interface": "wlan0", // (Optional) To force the use of this interface,
+        "format-wifi": " {essid}",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "family": "ipv4",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}"
+    },
+
+  "memory": {
+    "interval": 20,
+    "format": " {used:0.1f}G",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+
+    "mpd": {
+    "format": "  {artist} - {title}",
+    "format-disconnected": "",
+    "format-stopped": "",
+    "interval": 10,
+    "consume-icons": {
+      "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  },
+    "custom/gpu": {
+      "exec": "$HOME/.config/waybar/custom_modules/custom-gpu.sh",
+      "return-type": "json",
+      "format": "  {}",
+      "interval": 2,
+      "tooltip": "{tooltip}",
+      "max-length": 19,
+      "min-length": 19,
+      "on-click": "powerupp"
+    },
+    "custom/sysmenu": {
+      "format": "  ",
+      "on-click": "~/.config/polybar/colorblocks/scripts/powermenu.sh &"
+    },    
+    "custom/scratchpad-indicator": {
+        "interval": 3,
+        "return-type": "json",
+        "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '( select(.name == \"root\") | .nodes[] | select(.name == \"__i3\") | .nodes[] | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") }'",
+        "format": "{} ﳶ",
+        "on-click": "exec swaymsg 'scratchpad show'",
+        "on-click-right": "exec swaymsg 'move scratchpad'"
+    }    
+}
