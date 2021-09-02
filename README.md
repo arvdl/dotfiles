@@ -2,25 +2,29 @@
 
 Dotfiles collections:
 
+## i3gaps
+
 * i3gaps
-* polybar
 * rofi
-* alacritty - st
-* tmux
-* zsh with zprezto framework
-* vim
+* polybar
 * dunst
 * picom
 * gammastep
-* mpd
-* mpv
-* newsboat
-* zathura
 
-WIP:
+## Sway
 
 * sway
 * waybar
+* swaylock-effects-git
+* dunst
+* gammastep
+
+## Other components
+
+* alacritty - st
+* newsboat
+* vim
+* zsh with zprezto framework
 
 ## How to install
 
