@@ -15,9 +15,12 @@ Dotfiles collections:
 
 * sway
 * waybar
+* bemenu
+* nwg-shell
 * swaylock-effects-git
 * dunst
 * gammastep
+
 
 ## Other components
 
